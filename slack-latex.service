@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve slack-latex
+After=network.target
+
+[Service]
+User=edwinksl
+Group=www-data
+WorkingDirectory=/home/edwinksl/git/slack-latex
+Environment="PATH=/home/edwinksl/git/slack-latex/venv/bin"
+ExecStart=/home/edwinksl/git/slack-latex/venv/bin/uwsgi --ini slack_latex.ini
+
+[Install]
+WantedBy=multi-user.target
