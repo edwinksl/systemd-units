@@ -1,0 +1,10 @@
+[Unit]
+Description=Gridcoin daemon
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/gridcoinresearchd
+User=edwinksl
+
+[Install]
+WantedBy=multi-user.target
